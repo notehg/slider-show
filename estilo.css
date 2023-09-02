@@ -4,17 +4,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Defina uma altura mínima para ocupar a tela inteira */
+    min-height: 100vh;
 }
 
 .slider {
-    width: 100%; /* Usar 100% da largura da tela */
+    width: 100%;
     overflow: hidden;
 }
 
 .slides {
     display: flex;
-    width: 500%; /* 5 slides (cada um com 100% de largura) */
+    width: 500%;
 }
 
 .slides input {
@@ -22,12 +22,27 @@ body {
 }
 
 .img-slide {
-    width: 20%; /* Cada slide ocupa 20% da largura total */
-    float: left; /* Alinhar slides horizontalmente */
+    width: 20%;
+    float: left;
 }
 
 .img-slide img {
-    width: 100%; /* A imagem ocupa 100% da largura do slide */
+    width: 100%;
 }
 
-/* Restante do seu CSS permanece inalterado */
+/* Adicione a propriedade cursor: pointer; aos botões de navegação */
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
