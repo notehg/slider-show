@@ -1,58 +1,33 @@
-body{
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    height: 100%;
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Defina uma altura mínima para ocupar a tela inteira */
 }
 
-
-.slider{
-    margin:  0 auto;
-    width: 900px;
-    height: 500px;
-    overflow: hidden;   
+.slider {
+    width: 100%; /* Usar 100% da largura da tela */
+    overflow: hidden;
 }
 
-.slides{
-    width: 400px;
-    height: 400px;
-    display: flex; 
+.slides {
+    display: flex;
+    width: 500%; /* 5 slides (cada um com 100% de largura) */
 }
 
 .slides input {
     display: none;
 }
 
-.slide{
-    width: 50%;
-    position: relative;
+.img-slide {
+    width: 20%; /* Cada slide ocupa 20% da largura total */
+    float: left; /* Alinhar slides horizontalmente */
 }
 
-.slide img{
-    width: 900px;
+.img-slide img {
+    width: 100%; /* A imagem ocupa 100% da largura do slide */
 }
 
-.navegation{
-    position:absolute;
-    width: 900px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-
-}
-
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-    
-}
+/* Restante do seu CSS permanece inalterado */
