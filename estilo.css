@@ -30,3 +30,23 @@ body{
     width: 50%;
     position: relative;
 }
+
+.slide img{
+    width: 900px;
+}
+
+.navegation{
+    position:absolute;
+    width: 900px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
