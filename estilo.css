@@ -16,7 +16,7 @@ body {
 }
 
 .slide {
-    max-width: 100%;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,4 +57,24 @@ body {
 
 .right-arrow {
     right: 20px;
+}
+
+@media screen and (max-width: 999px) {
+    .slider-container {
+        height: auto;
+    }
+    .slider {
+        flex-direction: column;
+        align-items: center;
+    }
+    .slide {
+        min-width: 100%;
+    }
+    .slide img {
+        max-width: 100%;
+    }
+    .left-arrow,
+    .right-arrow {
+        font-size: 20px;
+    }
 }
