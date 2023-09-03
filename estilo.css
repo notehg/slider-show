@@ -13,11 +13,14 @@ body {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    overflow: hidden;
+    width: 100%; /* Preencher a largura da div */
 }
 
 .slide {
-    min-width: 100%;
+    flex: 0 0 100%; /* Preencher a largura da div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     position: relative;
 }
@@ -25,15 +28,12 @@ body {
 .slide a {
     text-decoration: none;
     color: #333;
-    display: block;
 }
 
 .slide img {
-    max-width: 100%; /* Mantém a largura do slide */
-    max-height: 400px; /* Ajuste a altura máxima da imagem conforme desejado */
+    opacity: 0.5;
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .slide img:hover{
