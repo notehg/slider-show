@@ -29,13 +29,9 @@ body {
     color: #333;
 }
 
-.img-sl{
-    width: 100%;
-    height: auto;
-}
 
 .slide img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
