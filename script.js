@@ -1,12 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll('.img-slide a');
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelectorAll(".slide");
+    const slideCount = slides.length;
+    const slideWidth = slides[0].offsetWidth;
+    const interval = 3000; // Intervalo de troca de slides em milissegundos (3 segundos)
 
-    // Adiciona um ouvinte de clique a cada imagem
-    slides.forEach((slide) => {
-        slide.addEventListener('click', function (event) {
-            event.preventDefault(); // Impede o comportamento padrão do link
-            const link = this.getAttribute('href');
-            window.location.href = link; // Navega para a página vinculada
-        });
-    });
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+        if (index < 0) {
+            index = slideCount - 1;
+        } else if (index >= slideCount) {
+            index = 0;
+        }
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    setInterval(nextSlide, interval);
+
+    // Event listeners para botões de navegação (opcional)
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+
+    if (prevButton) {
+        prevButton.addEventListener("click", prevSlide);
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", nextSlide);
+    }
 });
