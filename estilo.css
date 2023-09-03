@@ -29,9 +29,14 @@ body {
 }
 
 .slide img {
+    opacity: 0.5;
     max-width: 100%;
     height: auto;
 }
+
+img:hover {
+    opacity: 1.0;
+  }
 
 .slide-text {
     margin-top: 20px;
