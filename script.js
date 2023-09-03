@@ -27,15 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(nextSlide, interval);
 
-    // Event listeners para botões de navegação (opcional)
+    // Event listeners para botões de navegação
     const prevButton = document.querySelector(".prev-button");
     const nextButton = document.querySelector(".next-button");
 
     if (prevButton) {
-        prevButton.addEventListener("click", prevSlide);
+        prevButton.addEventListener("click", function () {
+            prevSlide();
+        });
     }
 
     if (nextButton) {
-        nextButton.addEventListener("click", nextSlide);
+        nextButton.addEventListener("click", function () {
+            nextSlide();
+        });
     }
 });
