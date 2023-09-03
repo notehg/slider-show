@@ -16,7 +16,7 @@ body {
 }
 
 .slide {
-    min-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@ body {
 
 .slide img {
     opacity: 0.5;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
