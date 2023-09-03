@@ -42,3 +42,23 @@ img:hover {
     margin-top: auto; /* Centraliza verticalmente o texto */
 }
 
+/* Adicione estilos para as setas esquerda e direita */
+.left-arrow,
+.right-arrow {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+

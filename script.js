@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listeners para botões de navegação
     const prevButton = document.querySelector(".prev-button");
     const nextButton = document.querySelector(".next-button");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
 
     if (prevButton) {
         prevButton.addEventListener("click", function () {
@@ -39,6 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (nextButton) {
         nextButton.addEventListener("click", function () {
+            nextSlide();
+        });
+    }
+
+    if (leftArrow) {
+        leftArrow.addEventListener("click", function () {
+            prevSlide();
+        });
+    }
+
+    if (rightArrow) {
+        rightArrow.addEventListener("click", function () {
             nextSlide();
         });
     }
