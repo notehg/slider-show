@@ -13,16 +13,15 @@ body {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%; /* Preencher a largura da div */
 }
 
 .slide {
-    flex:  100%; /* Preencher a largura da div */
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative;
+    position: relative; /* Adicionado para centralizar o texto verticalmente */
 }
 
 .slide a {
@@ -31,17 +30,12 @@ body {
 }
 
 .slide img {
-    opacity: 0.5;
     max-width: 100%;
     height: auto;
 }
 
-.slide img:hover{
-    opacity: 1;
-}
-
 .slide-text {
-    margin-top: auto; /* Centralizar verticalmente o texto */
+    margin-top: auto; /* Centraliza verticalmente o texto */
 }
 
 /* Adicione estilos para as setas esquerda e direita */
