@@ -1,48 +1,60 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+* { margin: 0; padding: 0; }
 
 .slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
+    vertical-align: top;
 }
 
-.slides {
-    display: flex;
-    width: 500%;
-}
-
-.slides input {
+.slider input {
     display: none;
 }
 
-.img-slide {
-    width: 20%;
-    float: left;
-}
-
-.img-slide img {
-    width: 100%;
-}
-
-/* Adicione a propriedade cursor: pointer; aos botões de navegação */
-.manual-btn {
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
+.slider label {
+    background-color: #000;
+    bottom: 10px;
     cursor: pointer;
-    transition: 1s;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
 }
 
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
+.slider li:nth-child(1) label {
+    left: 10px;
 }
 
-.manual-btn:hover {
-    background-color: white;
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
