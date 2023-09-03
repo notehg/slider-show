@@ -38,7 +38,7 @@ img:hover {
     opacity: 1.0;
   }
 
-.slide-text {
-    margin-top: 20px;
+  .slide-text {
+    margin-top: auto; /* Centraliza verticalmente o texto */
 }
 
