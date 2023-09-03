@@ -16,7 +16,7 @@ body {
 }
 
 .slide {
-    min-width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +30,9 @@ body {
 }
 
 
+
 .slide img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
