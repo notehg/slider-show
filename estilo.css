@@ -13,30 +13,35 @@ body {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%; /* Preencher a largura da div */
+    overflow: hidden; /* Para ajustar a imagem horizontalmente */
 }
 
 .slide {
-    flex: 0 0 100%; /* Preencher a largura da div */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
+    min-width: 100%;
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Adicionado para centralizar o texto verticalmente */
 }
 
 .slide a {
     text-decoration: none;
     color: #333;
+    display: block; /* Para fazer a imagem e o texto se alinharem horizontalmente */
 }
 
 .slide img {
-    max-width: 100%;
-    height: auto;
+    opacity: 0.5;
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura do slide */
+    height: auto; /* Para manter a proporção original da imagem */
+    display: block; /* Remove margens brancas ao redor da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.slide img:hover{
+    opacity: 1;
 }
 
 .slide-text {
-    margin-top: auto; /* Centralizar verticalmente o texto */
+    margin-top: auto; /* Centraliza verticalmente o texto */
 }
 
 /* Adicione estilos para as setas esquerda e direita */
@@ -57,3 +62,8 @@ body {
 .right-arrow {
     right: 20px;
 }
+
+
+
+
+
